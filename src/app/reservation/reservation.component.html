@@ -1,0 +1,56 @@
+<br><br><br><br>
+<div class="categorias">
+  <ul>
+    <!-- Categorías existentes -->
+    <li *ngFor="let categoria of categorias" (click)="filtrarPorCategoria($event, categoria.nombre)">
+      <a href="#"><i [class]="categoria.icono"></i> {{categoria.nombre}}</a>
+    </li>
+
+    <!-- Nueva sección para seleccionar país -->
+    <li>
+      <select [(ngModel)]="paisSeleccionado" (change)="filtrarPorPais($event, paisSeleccionado)">
+        <option value="">Todos los países</option>
+        <option *ngFor="let pais of paises" [value]="pais">{{ pais }}</option>
+      </select>
+    </li>
+  </ul>
+</div>
+
+<div class="containerr">
+  <div class="card" *ngFor="let card of cards"
+       [hidden]="(categoriaSeleccionada !== 'Todos' && card.categoria !== categoriaSeleccionada) || 
+                 (paisSeleccionado !== '' && card.pais !== paisSeleccionado)">
+    <div class="card-image">
+      <img [src]="card.imagen" [alt]="card.titulo">
+    </div>
+    <div class="card-info">
+      <h2>{{card.titulo}}</h2>
+      <a href="#" (click)="toggleFavorito($event, card)">
+        <i class="fas fa-star" [ngClass]="{ 'favorito': isFavorito(card) }"></i>
+      </a>
+      <p>{{card.descripcion}}</p>
+      <!-- Asegúrate de que routerLink esté configurado correctamente -->
+      <a class="ver-mas-link" [routerLink]="['/airbnb' + card.enlace]">Ver más..</a>
+    </div>
+  </div>
+
+  <!-- Mostrar cards favoritas -->
+  <div class="card" *ngFor="let favorito of getCardsFavoritos()"
+       [hidden]="categoriaSeleccionada !== 'Favoritos'">
+    <div class="card-image">
+      <img [src]="favorito.imagen" [alt]="favorito.titulo">
+    </div>
+    <div class="card-info">
+      <h2>{{favorito.titulo}}</h2>
+      <a href="#" (click)="toggleFavorito($event, favorito)">
+        <i class="fas fa-star favorito"></i>
+      </a>
+      <p>{{favorito.descripcion}}</p>
+      <!-- Asegúrate de que routerLink esté configurado correctamente -->
+      <a class="ver-mas-link" [routerLink]="['/airbnb' + favorito.enlace]">Ver más..</a>
+    </div>
+  </div>
+</div>
+
+
+<app-footer></app-footer>

@@ -1,0 +1,49 @@
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 30px 0;
+}
+
+.footer h5 {
+    color: #fff;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #fff;
+    padding-bottom: 5px;
+}
+
+.footer p {
+    color: #ccc;
+}
+
+.footer ul {
+    padding: 0;
+    list-style: none;
+}
+
+.footer ul li {
+    margin-bottom: 10px;
+}
+
+.footer ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer ul li a:hover {
+    color: #f8b400;
+    text-decoration: none;
+}
+
+.footer .list-inline-item {
+    font-size: 24px;
+    margin-right: 10px;
+}
+
+.footer .list-inline-item a {
+    color: #fff;
+}
+
+.footer .list-inline-item a:hover {
+    color: #f8b400;
+}

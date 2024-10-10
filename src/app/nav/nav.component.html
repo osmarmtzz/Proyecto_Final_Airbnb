@@ -1,0 +1,27 @@
+<nav [ngClass]="{'nav-scrolled': scrolled}">
+    <div class="navigation">
+        <div class="logo" [ngClass]="{'logo-scrolled': scrolled}">
+            <img src="../../assets/img/logo.png" alt="DreamStay Logo">
+        </div>
+        <div class="menu">
+            <a class="nav-link" [routerLink]="['/home']"><i class="fas fa-home"></i> HOME</a>
+            <a class="nav-link" [routerLink]="['/reservation']"><i class="fa-solid fa-plane-departure"></i> RESERVATION</a>
+            <a class="nav-link" [routerLink]="['/help']"><i class="fas fa-question-circle"></i> HELP</a>
+            <a class="nav-link" [routerLink]="['/contact']"><i class="fas fa-envelope"></i> CONTACT</a>
+            <a class="nav-link" [routerLink]="['/about']"><i class="fas fa-info-circle"></i> ABOUT</a>
+            <a class="nav-link" [routerLink]="['/search']"><i class="fas fa-search"></i> SEARCH</a>
+        </div>
+        <div class="sesion">
+            <div class="dropdown" (mouseleave)="closeDropdown()">
+                <a class="nav-link dropdown-toggle" (click)="toggleDropdown()">
+                    <i class="fa-solid fa-bars"></i> <i class="fa-solid fa-user-plus fa-lg"></i>
+                </a>
+                <div class="dropdown-menu" [ngClass]="{'show': dropdownOpen}">
+                    <a class="dropdown-item" [routerLink]="['/sesion']">Iniciar sesión</a>
+                    <a class="dropdown-item" [routerLink]="['/register']">Registrarse</a>
+                    <a class="dropdown-item" [routerLink]="['/contact']">Soporte</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>

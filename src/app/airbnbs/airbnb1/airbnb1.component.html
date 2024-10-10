@@ -1,0 +1,103 @@
+
+<div class="body">
+    <br><br><br><br>
+    <div class="titulo-compartir">
+        <div class="titulo">Lujoso Preciosa vista</div>
+        <div class="compartir">
+            <button (click)="sharePage()">
+                <i class="fas fa-share-alt"></i> Compartir
+            </button>
+        </div>
+    </div>
+
+    <div class="img-grid">
+        <div class="img img1" (click)="openModal('img1.jpg')">
+            <img src="../../../assets/img/Airbnbs/1Alberca-Increible/Lujoso Preciosa vista/img1.jpg" alt="img1">
+        </div>
+        <div class="img img2" (click)="openModal('img2.jpg')">
+            <img src="../../../assets/img/Airbnbs/1Alberca-Increible/Lujoso Preciosa vista/img2.jpg" alt="img2">
+        </div>
+        <div class="img img3" (click)="openModal('img3.jpg')">
+            <img src="../../../assets/img/Airbnbs/1Alberca-Increible/Lujoso Preciosa vista/img3.jpg" alt="img3">
+        </div>
+        <div class="img img4" (click)="openModal('img4.jpg')">
+            <img src="../../../assets/img/Airbnbs/1Alberca-Increible/Lujoso Preciosa vista/img4.jpg" alt="img4">
+        </div>
+        <div class="img img5" (click)="openModal('img5.jpg')">
+            <img src="../../../assets/img/Airbnbs/1Alberca-Increible/Lujoso Preciosa vista/img5.jpg" alt="img5">
+        </div>
+    </div>
+
+    <div class="details">
+        <h2>Descripción</h2>
+        <p class="texto">Nuevo apartamento de lujo junto al lago en residencia con piscina abierta en el período de verano del 7 de junio al 15 de septiembre (en caso de buen tiempo, la piscina podría abrirse con anticipación y cerrarse en una semana), cancha de tenis, cancha de bochas y parque (uso incluido en el precio) . Vista extraordinaria. Estacionamiento. Plaza de aparcamiento propia. A 150 metros del centro del pueblo medieval de Riva di Solto. Apartamento de tres habitaciones + baño + 2 terrazas.</p>
+        
+        <h3>Servicios</h3>
+        <div class="service-container">
+            <ul class="service-list">
+                <li><i class="fas fa-wifi"></i> Wi-Fi gratuito</li>
+                <li><i class="fas fa-swimming-pool"></i> Piscina privada</li>
+                <li><i class="fas fa-car"></i> Estacionamiento</li>
+                <li><i class="fas fa-utensils"></i> Cocina completa</li>
+            </ul>
+            <ul class="service-list">
+                <li><i class="fas fa-snowflake"></i> Sistema de aire acondicionado</li>
+                <li><i class="fas fa-mountain"></i> Vista a la montaña</li>
+                <li><i class="fas fa-water"></i> Alberca</li>
+                <li><i class="fas fa-tshirt"></i> Lavadora</li>
+            </ul>
+        </div>
+        
+        <h3>Opiniones</h3>
+        <div class="reviews">
+            <p class="texto">“Increíble experiencia, definitivamente volveré.” - Juan P.</p>
+            <p class="texto">“El lugar es tal como se muestra en las fotos.” - María L.</p>
+        </div>
+
+        <h3>Actividades cercanas</h3>
+        <ul class="category-list">
+            <li>Senderismo</li>
+            <li>Visitas a museos</li>
+            <li>Restaurantes gourmet</li>
+        </ul>
+
+        <h3>Recomendaciones locales</h3>
+        <ul class="category-list">
+            <li>Visita al Parque Central</li>
+            <li>Cata de vinos en la bodega local</li>
+            <li>Tour en bicicleta por la ciudad</li>
+        </ul>
+
+        <h3>Consejos de viaje</h3>
+        <p>Recuerda reservar con antelación y consultar las condiciones climáticas antes de tu llegada.</p>
+    </div>
+    <div class="ubicacion">
+    <h3>Ubicación</h3>
+        <p class="texto">Riva, Lombardía, Italia
+            Hermoso pueblo medieval sobre el lago con un encantador paseo; puedes subir al ferry para llegar a Montisola y llegar a Montisola (la isla del lago más grande de Europa).
+            Llega a los hermosos y pintorescos pueblos en el lago en breve.
+            Llega a las montañas.
+            A 45 minutos de las hermosas ciudades de Bérgamo y Brescia.
+            A 75 minutos de Milán.
+            Muy cerca se encuentra la Vallecamonica con el glaciar Adamello, sus montañas y el sitio de la Unesco de tallas rocosas, y Franciacorta con sus bodegas y colinas.</p>
+        <div class="map-container">
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!4v1721173231907!6m8!1m7!1stFJaGUumxUfzmuhqmzW-cw!2m2!1d45.77621396165306!2d10.04326420211424!3f109.35!4f-7.909999999999997!5f0.4000000000000002"
+                width="600" 
+                height="450" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal" *ngIf="isModalOpen" (click)="closeModal()">
+        <img [src]="selectedImage" alt="Zoomed image" class="modal-content" (click)="$event.stopPropagation()">
+        <span class="close" (click)="closeModal()">&times;</span>
+    </div>
+</div>
+
+<app-footer></app-footer>

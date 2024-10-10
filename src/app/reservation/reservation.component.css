@@ -1,0 +1,145 @@
+.categorias {
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 10px;
+}
+
+.categorias ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+.categorias ul li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.categorias ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+    text-align: center;
+    transition: color 0.3s ease;
+}
+
+.categorias ul li a:hover {
+    color: #007bff;
+}
+
+.categorias ul li i {
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+
+.containerr {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}   
+
+.card {
+    width: 400px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 40px;
+    
+}
+
+.card-image {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-info {
+    padding: 15px;
+}
+
+.card-info h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.card-info p {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.5;
+}
+.ver-mas-link {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center; /* Alineación del texto al centro */
+    transition: background-color 0.3s ease;
+    text-decoration: none; /* Evita la decoración de enlace predeterminada */
+}
+
+.ver-mas-link:hover {
+    background-color: #0056b3;
+}
+.favorito {
+    color: gold; /* Cambia el color del ícono a dorado cuando está marcado como favorito */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el ícono para indicar que es interactivo */
+  }
+  .categorias ul li select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    border: 1px solid #ddd;
+    padding: 10px 16px;
+    border-radius: 5px;
+    background-color: #f8f9fa;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.categorias ul li select:hover,
+.categorias ul li select:focus {
+    border-color: #007bff;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.categorias ul li select option:first-child {
+    color: #999;
+}
+
+.categorias ul li select option {
+    background-color: #fff;
+}
+
+.categorias ul li select:focus {
+    animation: border-pulse 0.5s infinite alternate;
+}
+
+@keyframes border-pulse {
+    from {
+        border-color: #ddd;
+    }
+    to {
+        border-color: #007bff;
+    }
+}
