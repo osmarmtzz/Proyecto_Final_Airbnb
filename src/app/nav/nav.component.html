@@ -1,4 +1,5 @@
-<nav [ngClass]="{'nav-scrolled': scrolled}">
+<body>
+    <nav [ngClass]="{'nav-scrolled': scrolled}">
     <div class="navigation">
         <div class="logo" [ngClass]="{'logo-scrolled': scrolled}">
             <img src="../../assets/img/logo.png" alt="DreamStay Logo">
@@ -9,7 +10,6 @@
             <a class="nav-link" [routerLink]="['/help']"><i class="fas fa-question-circle"></i> HELP</a>
             <a class="nav-link" [routerLink]="['/contact']"><i class="fas fa-envelope"></i> CONTACT</a>
             <a class="nav-link" [routerLink]="['/about']"><i class="fas fa-info-circle"></i> ABOUT</a>
-            <a class="nav-link" [routerLink]="['/search']"><i class="fas fa-search"></i> SEARCH</a>
         </div>
         <div class="sesion">
             <div class="dropdown" (mouseleave)="closeDropdown()">
@@ -25,3 +25,4 @@
         </div>
     </div>
 </nav>
+</body>

@@ -1,30 +1,44 @@
 .categorias {
     display: flex;
-    justify-content: center;
-    padding: 10px 0;
-    border-bottom: 1px solid #ddd;
-    margin-bottom: 10px;
+    justify-content: flex-start; /* Alineamos las categorías a la izquierda */
+    padding: 10px 20px; /* Añadimos padding extra */
+    border-bottom: 2px solid #ddd;
+    margin-bottom: 15px;
+    overflow-x: auto;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+    background-color: #f8f9fa; /* Fondo claro */
 }
 
 .categorias ul {
     list-style-type: none;
     padding: 0;
-    display: flex;
-    gap: 20px;
+    display: inline-flex;
+    gap: 25px; /* Espacio mayor entre las categorías */
+    flex-wrap: nowrap;
 }
 
 .categorias ul li {
     display: flex;
     flex-direction: column;
     align-items: center;
+    min-width: 120px;
+    cursor: pointer; /* Indicar que son interactivos */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.categorias ul li:hover {
+    transform: scale(1.1); /* Pequeña animación de zoom al hacer hover */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .categorias ul li a {
     text-decoration: none;
     color: #333;
-    font-size: 14px;
+    font-size: 16px; /* Fuente un poco más grande */
     text-align: center;
     transition: color 0.3s ease;
+    font-weight: 500; /* Un poco más de peso para el texto */
 }
 
 .categorias ul li a:hover {
@@ -32,15 +46,57 @@
 }
 
 .categorias ul li i {
-    font-size: 24px;
-    margin-bottom: 5px;
+    font-size: 28px; /* Ícono más grande */
+    margin-bottom: 8px;
+}
+
+.categorias ul li select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    border: 1px solid #ddd;
+    padding: 12px 18px;
+    border-radius: 5px;
+    background-color: #fff;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    outline: none;
+}
+
+.categorias ul li select:hover,
+.categorias ul li select:focus {
+    border-color: #007bff;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.categorias ul li select option:first-child {
+    color: #999;
+}
+
+.categorias ul li select option {
+    background-color: #fff;
+}
+
+.categorias ul li select:focus {
+    animation: border-pulse 0.5s infinite alternate;
+}
+
+@keyframes border-pulse {
+    from {
+        border-color: #ddd;
+    }
+    to {
+        border-color: #007bff;
+    }
 }
 
 .containerr {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-}   
+}
 
 .card {
     width: 400px;
@@ -50,7 +106,12 @@
     margin: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin-top: 40px;
-    
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
 .card-image {
@@ -81,6 +142,7 @@
     color: #666;
     line-height: 1.5;
 }
+
 .ver-mas-link {
     display: block;
     width: 100%;
@@ -90,56 +152,23 @@
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    text-align: center; /* Alineación del texto al centro */
+    text-align: center;
     transition: background-color 0.3s ease;
-    text-decoration: none; /* Evita la decoración de enlace predeterminada */
+    text-decoration: none;
 }
 
 .ver-mas-link:hover {
     background-color: #0056b3;
 }
+
 .favorito {
-    color: gold; /* Cambia el color del ícono a dorado cuando está marcado como favorito */
-    cursor: pointer; /* Cambia el cursor al pasar sobre el ícono para indicar que es interactivo */
-  }
-  .categorias ul li select {
-    appearance: none;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    border: 1px solid #ddd;
-    padding: 10px 16px;
-    border-radius: 5px;
-    background-color: #f8f9fa;
-    font-size: 14px;
+    color: gold;
     cursor: pointer;
-    transition: all 0.3s ease;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.categorias ul li select:hover,
-.categorias ul li select:focus {
-    border-color: #007bff;
-    background-color: #fff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.categorias ul li select option:first-child {
-    color: #999;
-}
-
-.categorias ul li select option {
-    background-color: #fff;
-}
-
-.categorias ul li select:focus {
-    animation: border-pulse 0.5s infinite alternate;
-}
-
-@keyframes border-pulse {
-    from {
-        border-color: #ddd;
-    }
-    to {
-        border-color: #007bff;
+@media (max-width: 768px) {
+    .categorias {
+        padding: 10px;
+        margin-bottom: 20px;
     }
 }

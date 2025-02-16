@@ -1,4 +1,3 @@
-
 <div class="body">
     <br><br><br><br>
     <div class="titulo-compartir">
@@ -28,58 +27,107 @@
         </div>
     </div>
 
-    <div class="details">
-        <h2>Descripción</h2>
-        <p class="texto">Nuevo apartamento de lujo junto al lago en residencia con piscina abierta en el período de verano del 7 de junio al 15 de septiembre (en caso de buen tiempo, la piscina podría abrirse con anticipación y cerrarse en una semana), cancha de tenis, cancha de bochas y parque (uso incluido en el precio) . Vista extraordinaria. Estacionamiento. Plaza de aparcamiento propia. A 150 metros del centro del pueblo medieval de Riva di Solto. Apartamento de tres habitaciones + baño + 2 terrazas.</p>
+    <div class="content-container">
+        <div class="details">
+            <h2>Descripción</h2>
+            <p class="texto">Nuevo apartamento de lujo junto al lago en residencia con piscina abierta en el período de verano...</p>
+            
+            <h3>Servicios</h3>
+            <div class="service-container">
+                <ul class="service-list">
+                    <li><i class="fas fa-wifi"></i> Wi-Fi gratuito</li>
+                    <li><i class="fas fa-swimming-pool"></i> Piscina privada</li>
+                    <li><i class="fas fa-car"></i> Estacionamiento</li>
+                    <li><i class="fas fa-utensils"></i> Cocina completa</li>
+                </ul>
+                <ul class="service-list">
+                    <li><i class="fas fa-snowflake"></i> Sistema de aire acondicionado</li>
+                    <li><i class="fas fa-mountain"></i> Vista a la montaña</li>
+                    <li><i class="fas fa-water"></i> Alberca</li>
+                    <li><i class="fas fa-tshirt"></i> Lavadora</li>
+                </ul>
+            </div>
+            
+            <h3>Opiniones</h3>
+            <div class="reviews">
+                <p class="texto">“Increíble experiencia, definitivamente volveré.” - Juan P.</p>
+                <p class="texto">“El lugar es tal como se muestra en las fotos.” - María L.</p>
+            </div>
+
+            <h3>Actividades cercanas</h3>
+            <ul class="category-list">
+                <li>Senderismo</li>
+                <li>Visitas a museos</li>
+                <li>Restaurantes gourmet</li>
+            </ul>
+
+            <h3>Recomendaciones locales</h3>
+            <ul class="category-list">
+                <li>Visita al Parque Central</li>
+                <li>Cata de vinos en la bodega local</li>
+                <li>Tour en bicicleta por la ciudad</li>
+            </ul>
+
+            <h3>Consejos de viaje</h3>
+            <p>Recuerda reservar con antelación y consultar las condiciones climáticas antes de tu llegada.</p>
+        </div>
+
+        <div class="reservation-form">
+            <h2>$1,659 MXN por noche</h2>
+            
+            <form>
+                <div class="form-row">
+                    <div>
+                        <label for="checkin">Fecha de llegada</label>
+                        <input type="date" id="checkin" name="checkin" required>
+                    </div>
+                    <div>
+                        <label for="checkout">Fecha de salida</label>
+                        <input type="date" id="checkout" name="checkout" required>
+                    </div>
+                </div>
         
-        <h3>Servicios</h3>
-        <div class="service-container">
-            <ul class="service-list">
-                <li><i class="fas fa-wifi"></i> Wi-Fi gratuito</li>
-                <li><i class="fas fa-swimming-pool"></i> Piscina privada</li>
-                <li><i class="fas fa-car"></i> Estacionamiento</li>
-                <li><i class="fas fa-utensils"></i> Cocina completa</li>
-            </ul>
-            <ul class="service-list">
-                <li><i class="fas fa-snowflake"></i> Sistema de aire acondicionado</li>
-                <li><i class="fas fa-mountain"></i> Vista a la montaña</li>
-                <li><i class="fas fa-water"></i> Alberca</li>
-                <li><i class="fas fa-tshirt"></i> Lavadora</li>
-            </ul>
+                <div class="form-row">
+                    <div>
+                        <label for="guests">Huéspedes</label>
+                        <input type="number" id="guests" name="guests" min="1" value="1" required>
+                    </div>
+                    <div>
+                        <label for="nights">Noches</label>
+                        <input type="number" id="nights" name="nights" min="1" value="1" disabled>
+                    </div>
+                </div>
+        
+                <button type="submit">Reservar</button>
+            </form>
+            
+            <div class="reservation-details">
+                No se te cobrará aún
+            </div>
+        
+            <div class="reservation-summary">
+                <table>
+                    <tr>
+                        <td>$1,659 MXN x <span id="total-nights">5</span> noches</td>
+                        <td>$8,295 MXN</td>
+                    </tr>
+                    <tr>
+                        <td>Tarifa de servicio de Airbnb</td>
+                        <td>$1,578 MXN</td>
+                    </tr>
+                    <tr>
+                        <td>Total antes de impuestos</td>
+                        <td class="total">$9,874 MXN</td>
+                    </tr>
+                </table>
+            </div>
         </div>
         
-        <h3>Opiniones</h3>
-        <div class="reviews">
-            <p class="texto">“Increíble experiencia, definitivamente volveré.” - Juan P.</p>
-            <p class="texto">“El lugar es tal como se muestra en las fotos.” - María L.</p>
-        </div>
-
-        <h3>Actividades cercanas</h3>
-        <ul class="category-list">
-            <li>Senderismo</li>
-            <li>Visitas a museos</li>
-            <li>Restaurantes gourmet</li>
-        </ul>
-
-        <h3>Recomendaciones locales</h3>
-        <ul class="category-list">
-            <li>Visita al Parque Central</li>
-            <li>Cata de vinos en la bodega local</li>
-            <li>Tour en bicicleta por la ciudad</li>
-        </ul>
-
-        <h3>Consejos de viaje</h3>
-        <p>Recuerda reservar con antelación y consultar las condiciones climáticas antes de tu llegada.</p>
     </div>
+
     <div class="ubicacion">
-    <h3>Ubicación</h3>
-        <p class="texto">Riva, Lombardía, Italia
-            Hermoso pueblo medieval sobre el lago con un encantador paseo; puedes subir al ferry para llegar a Montisola y llegar a Montisola (la isla del lago más grande de Europa).
-            Llega a los hermosos y pintorescos pueblos en el lago en breve.
-            Llega a las montañas.
-            A 45 minutos de las hermosas ciudades de Bérgamo y Brescia.
-            A 75 minutos de Milán.
-            Muy cerca se encuentra la Vallecamonica con el glaciar Adamello, sus montañas y el sitio de la Unesco de tallas rocosas, y Franciacorta con sus bodegas y colinas.</p>
+        <h3>Ubicación</h3>
+        <p class="texto">Riva, Lombardía, Italia...</p>
         <div class="map-container">
             <iframe 
                 src="https://www.google.com/maps/embed?pb=!4v1721173231907!6m8!1m7!1stFJaGUumxUfzmuhqmzW-cw!2m2!1d45.77621396165306!2d10.04326420211424!3f109.35!4f-7.909999999999997!5f0.4000000000000002"

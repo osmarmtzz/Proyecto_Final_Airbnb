@@ -15,7 +15,6 @@ import { Airbnb6Component } from './airbnbs/airbnb6/airbnb6.component';
 import { Airbnb7Component } from './airbnbs/airbnb7/airbnb7.component';
 import { Airbnb8Component } from './airbnbs/airbnb8/airbnb8.component';
 import { Airbnb9Component } from './airbnbs/airbnb9/airbnb9.component';
-import { SearchComponent } from './search/search.component';
 import { LoadingComponent } from './loading/loading.component';
 
 export const routes: Routes = [
@@ -27,7 +26,7 @@ export const routes: Routes = [
     {path: 'reservation', component: ReservationComponent},
     {path: 'contact', component: ContactComponent},
     {path: 'footer', component: FooterComponent},
-    {path: 'search', component: SearchComponent},
+
     {path: 'loading', component: LoadingComponent},
     { path: 'airbnb1', component: Airbnb1Component },
     { path: 'airbnb2', component: Airbnb2Component },

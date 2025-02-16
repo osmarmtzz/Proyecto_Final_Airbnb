@@ -1,4 +1,4 @@
-.body {
+body {
   background-color: #CFCACA;
   font-family: 'Arial', sans-serif;
 }
@@ -12,20 +12,17 @@
 }
 
 h2, h3 {
-  font-family: 'Arial', sans-serif;
+  font-family: 'Orbitron', sans-serif;
   color: #333;
   margin-bottom: 20px;
   text-transform: uppercase;
   letter-spacing: 3px;
-  font-family: "Orbitron", sans-serif;
-
 }
 
 .card-title {
   font-size: 1.25rem;
   font-weight: bold;
   color: #007bff;
-  
 }
 
 .btn-primary {
@@ -114,4 +111,48 @@ h2, h3 {
 img {
   max-width: 100%;
   height: auto;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .container {
+    padding: 20px 10px;
+  }
+
+  h2, h3 {
+    font-size: 1.5rem; /* Adjust heading size for smaller screens */
+  }
+
+  .card-title {
+    font-size: 1.1rem; /* Adjust card title size for smaller screens */
+  }
+
+  .btn-primary,
+  .btn-outline-primary {
+    padding: 10px 15px; /* Reduce padding on buttons */
+    font-size: 0.9rem; /* Adjust font size */
+  }
+
+  .ver-mas-link {
+    max-width: 100%; /* Allow link to take full width */
+  }
+
+  img {
+    max-width: 100%; /* Ensure images are responsive */
+  }
+}
+
+@media (max-width: 480px) {
+  h2, h3 {
+    font-size: 1.25rem; /* Further adjust heading size for very small screens */
+  }
+
+  .card-body {
+    padding: 15px; /* Reduce card body padding */
+  }
+
+  .ver-mas-link {
+    padding: 10px 20px; /* Adjust padding for smaller screens */
+    font-size: 0.8rem; /* Adjust font size */
+  }
 }
